@@ -68,19 +68,16 @@ data = {
 df = pd.DataFrame(data)
 print("DataFrame:\n", df)
 
-# 2. Фильтрация данных
-filtered_df = df[df['Age'] > 28]
-print("Filtered DataFrame:\n", filtered_df)
+# 2. Сохранение DataFrame в CSV-файл
+df.to_csv("data.csv", index=False)  # Сохраняем данные в файл
 
 # 3. Чтение данных из CSV файла
+df_from_csv = pd.read_csv("data.csv")
 
-# Считывание данных из CSV-файла
-df = pd.read_csv("data.csv")
+# 4. Вычисление среднего значения столбца "Age"
+mean_age = df_from_csv["Age"].mean() 
 
-# Вычисление среднего значения столбца "age"
-mean_age = df["age"].mean()
-
-# Вывод результатов
+# 5. Вывод результатов
 print(f"Средний возраст: {mean_age}")
 
 
