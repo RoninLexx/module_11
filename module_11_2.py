@@ -49,7 +49,7 @@ if __name__ == "__main__":
     print(my_class_info)
 
     # Пример со строкой
-    string_info = introspection_info("Hello, World!")
+    string_info = introspection_info("Privet")
     print(string_info)
 
     # Пример со списком
